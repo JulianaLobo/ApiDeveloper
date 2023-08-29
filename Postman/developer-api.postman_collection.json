@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "b232fea5-326c-47f8-ab70-66123776ae93",
+		"name": "developer-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AllDevelopers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/developers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"developers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDeveloperById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/developers/id/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"developers",
+						"id",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDeveloper",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"city\": \"Uberlândia\",\r\n        \"country\": \"Brazil\",\r\n        \"number\": 42,\r\n        \"street\": \"123 Main Street\"\r\n    },\r\n    \"lastName\": \"Gomes\",\r\n    \"level\": \"Senior\",\r\n    \"name\": \"Manuel\",\r\n    \"sector\": {\r\n        \"floor\": 5,\r\n        \"name\": \"Development\"\r\n    },\r\n    \"specialization\": \"Backend\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/developers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"developers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDeveloper",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": \"23isscv8asd4aoappaoasduasdn\",\r\n\"name\": \"Manuel\",\r\n\"lastName\": \"Gomes\",\r\n\"level\": \"Senior\",\r\n\"specialization\": \"Backend\",\r\n\"sector\": {\r\n\"name\": \"Development\",\r\n\"floor\": 5\r\n},\r\n\"address\": {\r\n\"street\": \"123 Main Street\",\r\n\"number\": 42,\r\n\"city\": \"Uberlândia\",\r\n\"country\": \"Brazil\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/developers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"developers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDeveloperById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/developers/id/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"developers",
+						"id",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
